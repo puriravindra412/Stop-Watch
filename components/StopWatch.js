@@ -40,6 +40,7 @@ const StopWatch = () => {
   };
   // Method to reset timer back to 0
   const reset = () => {
+    setIsRunning(false);
     setTime(0);
   };
 
