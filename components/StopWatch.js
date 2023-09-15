@@ -32,11 +32,11 @@ const StopWatch = () => {
 
   // Method to start and stop timer
   const startTimer = () => {
-    setIsRunning(!isRunning);
+    setIsRunning(true);
   };
 
   const StopTimer = () => {
-    setIsRunning(!isRunning);
+    setIsRunning(false);
   };
   // Method to reset timer back to 0
   const reset = () => {
@@ -75,11 +75,11 @@ const StopWatch = () => {
 				)}
 				{!isRunning  && (
 					<>
-						<Button
+                    {!isRunning&&<Button
 							style={[styles.button  ]}
 							onPress={StopTimer}
               title="stop"
-						/>
+						/>}
 							
 						
 						<Button
