@@ -1,20 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { View ,StyleSheet}
+	from 'react-native';
+import StopWatch from './components/StopWatch';
+
+const App = () => {
+
+  
+
+	return (
+		<View style={styles.container}>
+			<StopWatch />
+      <StopWatch />
+      <StopWatch />
+			
+		</View>
+	);
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	header: {
+		fontSize: 30,
+		color: "green",
+		marginBottom: 10,
+	},
+	subHeader: {
+		fontSize: 18,
+		marginBottom: 10,
+		color: "blue",
+	},
+	timeText: {
+		fontSize: 48,
+	},
+	buttonContainer: {
+		flexDirection: 'row',
+		marginTop: 20,
+	},
+	button: {
+		paddingVertical: 10,
+		paddingHorizontal: 20,
+		borderRadius: 5,
+	},
+
+	buttonText: {
+		color: 'white',
+		fontSize: 16,
+	},
 });
+
+export default App;
